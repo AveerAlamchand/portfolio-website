@@ -22,10 +22,6 @@ import {
   MessageCircle,
   GraduationCap,
   Building,
-  Heart,
-  Briefcase,
-  GraduationCap,
-  Building,
   Heart
 } from "lucide-react";
 
