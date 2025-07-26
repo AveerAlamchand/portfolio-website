@@ -10,7 +10,7 @@ export const mockPortfolioData = {
     github: "https://github.com/AveerAlamchand",
     linkedin: "https://linkedin.com/in/aveer-alamchand-3187912a0",
     location: "University of KwaZulu-Natal",
-    cvUrl: "/cv/aveer-alamchand-cv.pdf"
+    cvUrl: "https://customer-assets.emergentagent.com/job_aveer-techfolio/artifacts/74ajrvut_Aveer%20Norman%20Psalms%20Alamchand%20CV.pdf"
   },
 
   // About Me Section
