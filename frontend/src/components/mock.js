@@ -53,7 +53,7 @@ export const mockPortfolioData = {
       description: "From responsive layouts to interactive JavaScript elements, these projects reflect my journey through Sololearn's Web Dev path.",
       technologies: ["HTML", "CSS", "JavaScript"],
       certificate: true,
-      certificateUrl: "/certificates/sololearn-web-dev.pdf",
+      certificateUrl: "https://www.sololearn.com/en/certificates/CC-JMQX6A9D",
       type: "web",
       status: "completed",
       featured: true
