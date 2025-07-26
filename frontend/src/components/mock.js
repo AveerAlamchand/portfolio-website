@@ -26,7 +26,53 @@ export const mockPortfolioData = {
     degree: "Computer Science"
   },
 
-  // Skills organized by category
+  // Interests
+  interests: [
+    { icon: "💪", title: "Gym & Fitness", description: "Maintaining physical and mental strength" },
+    { icon: "♟️", title: "Chess", description: "Strategic thinking and problem solving" },
+    { icon: "🧠", title: "Generative AI & Automation", description: "Exploring cutting-edge AI technologies" },
+    { icon: "🎮", title: "Game Mechanics & Narrative Design", description: "Creating engaging interactive experiences" }
+  ],
+
+  // Education
+  education: {
+    university: {
+      name: "University of KwaZulu-Natal",
+      degree: "BSc in Computer Science & IT",
+      period: "2023–2026",
+      achievements: [
+        "16 Distinctions",
+        "4× Dean's Commendations", 
+        "Top 5 Scholarship Award"
+      ]
+    },
+    highSchool: {
+      name: "Curro Heritage House",
+      qualification: "National Senior Certificate",
+      period: "2018–2022",
+      achievements: [
+        "4 Distinctions"
+      ]
+    }
+  },
+
+  // Experience
+  experience: [
+    {
+      id: 1,
+      position: "Assistant",
+      company: "UCL, Durban",
+      period: "2023–2025 holiday periods",
+      description: "Balanced tasks in a fast-paced environment. Sharpened my work ethic, teamwork, and professional discipline during 3 holiday contracts."
+    },
+    {
+      id: 2,
+      position: "Class Representative", 
+      company: "UKZN",
+      period: "2024",
+      description: "Elected class rep for Mathematical Modelling. Acted as liaison between students and lecturer, resolving academic and admin issues."
+    }
+  ],
   skills: {
     frontend: ["HTML", "CSS", "JavaScript", "Web Development (Sololearn Certified)"],
     backend: ["Java", "SQL", "Python", "Git", "Bash", "OOP"],
