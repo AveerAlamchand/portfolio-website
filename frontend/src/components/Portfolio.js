@@ -202,15 +202,36 @@ const Portfolio = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center pt-20">
-        <div className="container mx-auto px-6 text-center">
+      <section id="hero" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden gradient-bg-3">
+        {/* Animated background shapes */}
+        <div className="floating-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+          <div className="shape shape-3"></div>
+        </div>
+        
+        {/* Particle effect */}
+        <div className="particles">
+          {[...Array(20)].map((_, i) => (
+            <div 
+              key={i} 
+              className="particle" 
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${8 + Math.random() * 4}s`
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight" 
+            <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight glow-text" 
                 style={{ color: '#1a1a2e', fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
               {mockData.personal.name}
             </h1>
-            <p className="text-xl md:text-2xl mb-4 font-light opacity-80" 
-               style={{ color: '#1a1a2e' }}>
+            <p className="text-xl md:text-2xl mb-4 font-light gradient-text">
               {mockData.personal.title}
             </p>
             <p className="text-lg md:text-xl mb-12 opacity-70 max-w-2xl mx-auto" 
@@ -221,8 +242,7 @@ const Portfolio = () => {
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('projects')}
-                style={{ backgroundColor: '#00adb5', color: '#f5f5f5' }}
-                className="text-lg px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-200 transform hover:scale-105"
+                className="text-lg px-8 py-3 rounded-lg pulse-button gradient-bg-1 text-white border-0 hover:opacity-90 transition-all duration-200 transform hover:scale-105"
               >
                 View My Work
               </Button>
@@ -230,27 +250,26 @@ const Portfolio = () => {
                 variant="outline" 
                 size="lg"
                 onClick={() => scrollToSection('contact')}
-                style={{ borderColor: '#00adb5', color: '#00adb5' }}
-                className="text-lg px-8 py-3 rounded-lg hover:bg-opacity-10 transition-all duration-200 transform hover:scale-105"
+                className="text-lg px-8 py-3 rounded-lg pulse-button hover:bg-opacity-10 transition-all duration-200 transform hover:scale-105"
+                style={{ borderColor: '#00adb5', color: '#00adb5', borderWidth: '2px' }}
               >
                 Let's Connect
               </Button>
             </div>
             <div className="flex justify-center gap-6 mt-12">
               <a href={mockData.personal.github} target="_blank" rel="noopener noreferrer"
-                 className="p-3 rounded-full transition-all duration-200 transform hover:scale-110" 
+                 className="p-3 rounded-full transition-all duration-200 transform interactive-icon gradient-bg-1" 
                  style={{ backgroundColor: '#eeeeee' }}>
-                <Github className="w-6 h-6" style={{ color: '#1a1a2e' }} />
+                <Github className="w-6 h-6 text-white" />
               </a>
               <a href={mockData.personal.linkedin} target="_blank" rel="noopener noreferrer"
-                 className="p-3 rounded-full transition-all duration-200 transform hover:scale-110" 
+                 className="p-3 rounded-full transition-all duration-200 transform interactive-icon gradient-bg-1" 
                  style={{ backgroundColor: '#eeeeee' }}>
-                <Linkedin className="w-6 h-6" style={{ color: '#1a1a2e' }} />
+                <Linkedin className="w-6 h-6 text-white" />
               </a>
-              <button className="p-3 rounded-full transition-all duration-200 transform hover:scale-110"
-                      onClick={() => window.open("https://customer-assets.emergentagent.com/job_aveer-techfolio/artifacts/74ajrvut_Aveer%20Norman%20Psalms%20Alamchand%20CV.pdf", "_blank")}
-                      style={{ backgroundColor: '#eeeeee' }}>
-                <Download className="w-6 h-6" style={{ color: '#1a1a2e' }} />
+              <button className="p-3 rounded-full transition-all duration-200 transform interactive-icon gradient-bg-1"
+                      onClick={() => window.open("https://customer-assets.emergentagent.com/job_aveer-techfolio/artifacts/74ajrvut_Aveer%20Norman%20Psalms%20Alamchand%20CV.pdf", "_blank")}>
+                <Download className="w-6 h-6 text-white" />
               </button>
             </div>
           </div>
