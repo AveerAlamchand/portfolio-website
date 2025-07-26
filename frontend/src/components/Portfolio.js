@@ -294,6 +294,145 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Interests Section */}
+      <section id="interests" className="py-24" style={{ backgroundColor: '#f5f5f5' }}>
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
+                style={{ color: '#1a1a2e' }}>
+              Interests
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {mockData.interests.map((interest, index) => (
+                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-4" style={{ color: '#1a1a2e' }}>
+                      <span className="text-3xl">{interest.icon}</span>
+                      <span>{interest.title}</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p style={{ color: '#1a1a2e', opacity: 0.8 }}>
+                      {interest.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-24" style={{ backgroundColor: '#ffffff' }}>
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
+                style={{ color: '#1a1a2e' }}>
+              Education
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* University */}
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
+                    <GraduationCap className="w-8 h-8" style={{ color: '#00adb5' }} />
+                    University
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1a1a2e' }}>
+                    {mockData.education.university.name}
+                  </h3>
+                  <p className="text-lg mb-2" style={{ color: '#1a1a2e', opacity: 0.9 }}>
+                    {mockData.education.university.degree}
+                  </p>
+                  <p className="text-sm mb-4" style={{ color: '#1a1a2e', opacity: 0.7 }}>
+                    {mockData.education.university.period}
+                  </p>
+                  <div className="space-y-2">
+                    {mockData.education.university.achievements.map((achievement, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00adb5' }}></div>
+                        <span style={{ color: '#1a1a2e' }}>{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* High School */}
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
+                    <Building className="w-8 h-8" style={{ color: '#00adb5' }} />
+                    High School
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1a1a2e' }}>
+                    {mockData.education.highSchool.name}
+                  </h3>
+                  <p className="text-lg mb-2" style={{ color: '#1a1a2e', opacity: 0.9 }}>
+                    {mockData.education.highSchool.qualification}
+                  </p>
+                  <p className="text-sm mb-4" style={{ color: '#1a1a2e', opacity: 0.7 }}>
+                    {mockData.education.highSchool.period}
+                  </p>
+                  <div className="space-y-2">
+                    {mockData.education.highSchool.achievements.map((achievement, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00adb5' }}></div>
+                        <span style={{ color: '#1a1a2e' }}>{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-24" style={{ backgroundColor: '#f5f5f5' }}>
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
+                style={{ color: '#1a1a2e' }}>
+              Experience
+            </h2>
+            <div className="space-y-8">
+              {mockData.experience.map((exp) => (
+                <Card key={exp.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
+                      <Briefcase className="w-6 h-6" style={{ color: '#00adb5' }} />
+                      <div>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+                          <span>{exp.position}</span>
+                          <Badge style={{ backgroundColor: '#00adb5', color: '#f5f5f5' }}>
+                            {exp.company}
+                          </Badge>
+                        </div>
+                        <p className="text-sm font-normal mt-1" style={{ color: '#1a1a2e', opacity: 0.7 }}>
+                          {exp.period}
+                        </p>
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p style={{ color: '#1a1a2e', opacity: 0.8 }}>
+                      {exp.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section id="skills" className="py-24" style={{ backgroundColor: '#f5f5f5' }}>
         <div className="container mx-auto px-6">
