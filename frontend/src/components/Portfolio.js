@@ -396,6 +396,7 @@ const Portfolio = () => {
                     </div>
                     {project.certificate && (
                       <Button variant="outline" size="sm" 
+                              onClick={() => window.open("https://www.sololearn.com/en/certificates/CC-JMQX6A9D", "_blank")}
                               style={{ borderColor: '#00adb5', color: '#00adb5' }}
                               className="hover:bg-opacity-10 transition-all duration-200">
                         <ExternalLink className="w-4 h-4 mr-2" />
