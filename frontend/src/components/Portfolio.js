@@ -19,7 +19,11 @@ import {
   Calendar,
   Award,
   Star,
-  MessageCircle
+  MessageCircle,
+  Briefcase,
+  GraduationCap,
+  Building,
+  Heart
 } from "lucide-react";
 
 const Portfolio = () => {
