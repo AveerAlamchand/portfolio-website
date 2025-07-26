@@ -139,7 +139,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'achievements', 'contact'];
+      const sections = ['hero', 'about', 'interests', 'education', 'experience', 'skills', 'projects', 'achievements', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
