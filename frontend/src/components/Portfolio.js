@@ -38,7 +38,7 @@ const Portfolio = () => {
     about: {
       description: "Hi! I'm Aveer Alamchand, a final-year Computer Science student at the University of KwaZulu-Natal. I'm passionate about building things that matter — whether it's a dynamic AI tool or a story-driven C++ game.\n\nMy learning journey is built on curiosity, consistency, and collaboration. I strive to write clean code, communicate clearly, and deliver results that are thoughtful, ethical, and engaging.",
       highlights: [
-        "5× Dean's Commendation",
+        "Working on Echoes of Fate Game",
         "Scholarship recipient – Top 5 in my college (2nd year)",
         "Excited about Generative AI, LLMs, and No-Code Automation"
       ]
