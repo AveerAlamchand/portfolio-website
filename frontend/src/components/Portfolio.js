@@ -247,7 +247,8 @@ const Portfolio = () => {
                  style={{ backgroundColor: '#eeeeee' }}>
                 <Linkedin className="w-6 h-6" style={{ color: '#1a1a2e' }} />
               </a>
-              <button className="p-3 rounded-full transition-all duration-200 transform hover:scale-110" 
+              <button className="p-3 rounded-full transition-all duration-200 transform hover:scale-110"
+                      onClick={() => window.open("https://customer-assets.emergentagent.com/job_aveer-techfolio/artifacts/74ajrvut_Aveer%20Norman%20Psalms%20Alamchand%20CV.pdf", "_blank")}
                       style={{ backgroundColor: '#eeeeee' }}>
                 <Download className="w-6 h-6" style={{ color: '#1a1a2e' }} />
               </button>
