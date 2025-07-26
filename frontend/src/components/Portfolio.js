@@ -173,7 +173,7 @@ const Portfolio = () => {
               Aveer Alamchand
             </div>
             <div className="hidden md:flex space-x-8">
-              {['About', 'Skills', 'Projects', 'Achievements', 'Contact'].map((item) => (
+              {['About', 'Interests', 'Education', 'Experience', 'Skills', 'Projects', 'Achievements', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
