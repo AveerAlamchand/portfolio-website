@@ -278,15 +278,22 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24" style={{ backgroundColor: '#ffffff' }}>
-        <div className="container mx-auto px-6">
+      <section id="about" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+        {/* Subtle background elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute top-10 left-10 w-20 h-20 rounded-full" style={{ backgroundColor: '#00adb5' }}></div>
+          <div className="absolute top-1/3 right-20 w-16 h-16 rotate-45" style={{ backgroundColor: '#00d4aa' }}></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 rounded-full" style={{ backgroundColor: '#1a1a2e' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
                 style={{ color: '#1a1a2e' }}>
               Who I Am
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="slide-in-left">
                 <p className="text-lg leading-relaxed mb-6" style={{ color: '#1a1a2e' }}>
                   {mockData.about.description.split('\n\n')[0]}
                 </p>
@@ -294,15 +301,15 @@ const Portfolio = () => {
                   {mockData.about.description.split('\n\n')[1]}
                 </p>
               </div>
-              <Card className="border-0 shadow-lg" style={{ backgroundColor: '#f5f5f5' }}>
+              <Card className="border-0 shadow-lg interactive-card slide-in-right" style={{ backgroundColor: '#f5f5f5' }}>
                 <CardHeader>
-                  <CardTitle style={{ color: '#1a1a2e' }}>Highlights</CardTitle>
+                  <CardTitle className="gradient-text">Highlights</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     {mockData.about.highlights.map((highlight, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00adb5' }}></div>
+                      <div key={index} className="flex items-center gap-3 transform hover:translate-x-2 transition-transform duration-200">
+                        <div className="w-3 h-3 rounded-full gradient-bg-1"></div>
                         <span style={{ color: '#1a1a2e' }}>{highlight}</span>
                       </div>
                     ))}
