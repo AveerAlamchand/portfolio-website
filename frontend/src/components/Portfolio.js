@@ -354,7 +354,7 @@ const Portfolio = () => {
       <section id="education" className="py-24" style={{ backgroundColor: '#ffffff' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
+            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center glow-text" 
                 style={{ color: '#1a1a2e' }}>
               Education
             </h2>
