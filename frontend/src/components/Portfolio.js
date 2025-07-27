@@ -715,14 +715,13 @@ const Portfolio = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" 
                       onClick={() => window.open(`mailto:${mockData.personal.email}?subject=Let's collaborate!&body=Hi Aveer, I'd love to discuss potential collaboration opportunities.`, '_blank')}
-                      style={{ backgroundColor: '#00adb5', color: '#f5f5f5' }}
-                      className="text-lg px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-200 transform hover:scale-105">
+                      className="text-lg px-8 py-3 rounded-lg pulse-button gradient-bg-1 text-white border-0 hover:opacity-90 transition-all duration-200 transform hover:scale-105">
                 Reach Out
               </Button>
               <Button variant="outline" size="lg"
                       onClick={() => window.open(`mailto:${mockData.personal.email}?subject=Let's schedule a chat!&body=Hi Aveer, I'd like to schedule a chat with you. What's your availability like?`, '_blank')}
-                      style={{ borderColor: '#00adb5', color: '#00adb5' }}
-                      className="text-lg px-8 py-3 rounded-lg hover:bg-opacity-10 transition-all duration-200 transform hover:scale-105">
+                      className="text-lg px-8 py-3 rounded-lg pulse-button hover:bg-opacity-10 transition-all duration-200 transform hover:scale-105"
+                      style={{ borderColor: '#00adb5', color: '#00adb5', borderWidth: '2px' }}>
                 Schedule a Chat
               </Button>
             </div>
