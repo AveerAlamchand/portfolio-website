@@ -577,8 +577,15 @@ const Portfolio = () => {
       <Separator className="my-0" style={{ backgroundColor: '#eeeeee' }} />
 
       {/* Projects Section */}
-      <section id="projects" className="py-24" style={{ backgroundColor: '#ffffff' }}>
-        <div className="container mx-auto px-6">
+      <section id="projects" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+        {/* Subtle background pattern */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full" style={{ backgroundColor: '#00adb5' }}></div>
+          <div className="absolute bottom-1/3 right-10 w-24 h-24 rotate-12" style={{ backgroundColor: '#00d4aa' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 rounded-full" style={{ backgroundColor: '#1a1a2e' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
                 style={{ color: '#1a1a2e' }}>
@@ -587,15 +594,24 @@ const Portfolio = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {mockData.projects.map((project) => (
                 <Card key={project.id} 
-                      className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                      className="border-0 shadow-lg interactive-card overflow-hidden group">
+                  {project.image && (
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                  )}
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between" style={{ color: '#1a1a2e' }}>
-                      <span>{project.title}</span>
+                      <span className="gradient-text">{project.title}</span>
                       {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer"
-                           className="p-2 rounded-full transition-all duration-200 transform hover:scale-110" 
-                           style={{ backgroundColor: '#f5f5f5' }}>
-                          <Github className="w-5 h-5" style={{ color: '#1a1a2e' }} />
+                           className="p-2 rounded-full transition-all duration-200 transform interactive-icon gradient-bg-1">
+                          <Github className="w-5 h-5 text-white" />
                         </a>
                       )}
                     </CardTitle>
@@ -607,7 +623,7 @@ const Portfolio = () => {
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <Badge key={index} 
-                               style={{ backgroundColor: '#00adb5', color: '#f5f5f5' }}>
+                               className="gradient-bg-1 text-white border-0 hover:opacity-80 transition-opacity">
                           {tech}
                         </Badge>
                       ))}
@@ -615,8 +631,8 @@ const Portfolio = () => {
                     {project.certificate && (
                       <Button variant="outline" size="sm" 
                               onClick={() => window.open("https://www.sololearn.com/en/certificates/CC-JMQX6A9D", "_blank")}
-                              style={{ borderColor: '#00adb5', color: '#00adb5' }}
-                              className="hover:bg-opacity-10 transition-all duration-200">
+                              className="pulse-button hover:bg-opacity-10 transition-all duration-200"
+                              style={{ borderColor: '#00adb5', color: '#00adb5' }}>
                         <ExternalLink className="w-4 h-4 mr-2" />
                         View Certificate
                       </Button>
