@@ -587,7 +587,7 @@ const Portfolio = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
+            <h2 className="text-4xl md:text-5xl font-light mb-12 text-center glow-text" 
                 style={{ color: '#1a1a2e' }}>
               Featured Projects
             </h2>
