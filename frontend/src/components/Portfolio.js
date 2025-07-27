@@ -461,18 +461,24 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24" style={{ backgroundColor: '#f5f5f5' }}>
-        <div className="container mx-auto px-6">
+      <section id="skills" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#f5f5f5' }}>
+        {/* Subtle animated background */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-3">
+          <div className="absolute top-20 right-10 w-24 h-24 rounded-full animate-pulse" style={{ backgroundColor: '#00adb5' }}></div>
+          <div className="absolute bottom-1/4 left-16 w-18 h-18 rotate-45 animate-pulse" style={{ backgroundColor: '#00d4aa', animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-light mb-12 text-center" 
                 style={{ color: '#1a1a2e' }}>
               Technical Skills
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Card className="border-0 shadow-lg interactive-card skill-badge-frontend">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
-                    <Code2 className="w-6 h-6" style={{ color: '#00adb5' }} />
+                  <CardTitle className="flex items-center gap-3 text-white">
+                    <Code2 className="w-6 h-6" />
                     Frontend
                   </CardTitle>
                 </CardHeader>
@@ -480,7 +486,7 @@ const Portfolio = () => {
                   <div className="flex flex-wrap gap-2">
                     {mockData.skills.frontend.map((skill, index) => (
                       <Badge key={index} variant="secondary" 
-                             style={{ backgroundColor: '#eeeeee', color: '#1a1a2e' }}>
+                             className="bg-white/20 text-white hover:bg-white/30 transition-colors">
                         {skill}
                       </Badge>
                     ))}
@@ -488,10 +494,10 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Card className="border-0 shadow-lg interactive-card skill-badge-backend">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
-                    <Briefcase className="w-6 h-6" style={{ color: '#00adb5' }} />
+                  <CardTitle className="flex items-center gap-3 text-white">
+                    <Briefcase className="w-6 h-6" />
                     Backend & Tools
                   </CardTitle>
                 </CardHeader>
@@ -499,7 +505,7 @@ const Portfolio = () => {
                   <div className="flex flex-wrap gap-2">
                     {mockData.skills.backend.map((skill, index) => (
                       <Badge key={index} variant="secondary" 
-                             style={{ backgroundColor: '#eeeeee', color: '#1a1a2e' }}>
+                             className="bg-white/20 text-white hover:bg-white/30 transition-colors">
                         {skill}
                       </Badge>
                     ))}
@@ -507,10 +513,10 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Card className="border-0 shadow-lg interactive-card skill-badge-ai">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
-                    <Brain className="w-6 h-6" style={{ color: '#00adb5' }} />
+                  <CardTitle className="flex items-center gap-3 text-gray-800">
+                    <Brain className="w-6 h-6" />
                     AI & Automation
                   </CardTitle>
                 </CardHeader>
@@ -518,7 +524,7 @@ const Portfolio = () => {
                   <div className="flex flex-wrap gap-2">
                     {mockData.skills.ai.map((skill, index) => (
                       <Badge key={index} variant="secondary" 
-                             style={{ backgroundColor: '#eeeeee', color: '#1a1a2e' }}>
+                             className="bg-white/30 text-gray-800 hover:bg-white/50 transition-colors">
                         {skill}
                       </Badge>
                     ))}
@@ -526,10 +532,10 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Card className="border-0 shadow-lg interactive-card skill-badge-gamedev">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
-                    <Gamepad2 className="w-6 h-6" style={{ color: '#00adb5' }} />
+                  <CardTitle className="flex items-center gap-3 text-gray-800">
+                    <Gamepad2 className="w-6 h-6" />
                     Game Dev & C++
                   </CardTitle>
                 </CardHeader>
@@ -537,7 +543,7 @@ const Portfolio = () => {
                   <div className="flex flex-wrap gap-2">
                     {mockData.skills.gamedev.map((skill, index) => (
                       <Badge key={index} variant="secondary" 
-                             style={{ backgroundColor: '#eeeeee', color: '#1a1a2e' }}>
+                             className="bg-white/30 text-gray-800 hover:bg-white/50 transition-colors">
                         {skill}
                       </Badge>
                     ))}
@@ -545,10 +551,10 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 md:col-span-2 lg:col-span-1">
+              <Card className="border-0 shadow-lg interactive-card skill-badge-soft md:col-span-2 lg:col-span-1">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" style={{ color: '#1a1a2e' }}>
-                    <MessageCircle className="w-6 h-6" style={{ color: '#00adb5' }} />
+                  <CardTitle className="flex items-center gap-3 text-white">
+                    <MessageCircle className="w-6 h-6" />
                     Soft Skills
                   </CardTitle>
                 </CardHeader>
@@ -556,7 +562,7 @@ const Portfolio = () => {
                   <div className="flex flex-wrap gap-2">
                     {mockData.skills.soft.map((skill, index) => (
                       <Badge key={index} variant="secondary" 
-                             style={{ backgroundColor: '#eeeeee', color: '#1a1a2e' }}>
+                             className="bg-white/20 text-white hover:bg-white/30 transition-colors">
                         {skill}
                       </Badge>
                     ))}
