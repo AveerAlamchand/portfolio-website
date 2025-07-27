@@ -691,7 +691,7 @@ const Portfolio = () => {
                 Reach Out
               </Button>
               <Button variant="outline" size="lg"
-                      onClick={() => window.open('https://calendly.com/aveer-alamchand', '_blank')}
+                      onClick={() => window.open(`mailto:${mockData.personal.email}?subject=Let's schedule a chat!&body=Hi Aveer, I'd like to schedule a chat with you. What's your availability like?`, '_blank')}
                       style={{ borderColor: '#00adb5', color: '#00adb5' }}
                       className="text-lg px-8 py-3 rounded-lg hover:bg-opacity-10 transition-all duration-200 transform hover:scale-105">
                 Schedule a Chat
