@@ -102,6 +102,7 @@ const Portfolio = () => {
         description: "Story-based interactive quiz game (C++). An immersive, side-scrolling game where players travel through time, battling corrupted emperors in quiz-style boss fights. Features item systems, dialogue interactions, and a gripping plot that adapts based on your answers.",
         technologies: ["C++", "Game Design", "Story Scripting"],
         github: "https://github.com/Fogtail/Comp315_Project.git",
+        image: "https://customer-assets.emergentagent.com/job_aveer-techfolio/artifacts/ems28446_Picture1.png", 
         type: "game"
       },
       {
